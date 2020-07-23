@@ -1,0 +1,56 @@
+<%- include('partials/header'); -%>
+<h1 style="text-align: center;" >Log In </h1>
+<form action="/login" method="POST">
+    
+    <div class="container" >
+      <label  for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="username" required><br>
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="password" required><br>
+      <button>Login</button><br>
+    </div>
+  </form>
+  <style>
+  form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  /* Set a style for all buttons */
+  button {
+    background-color: #7bb7da;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    margin-left: 300px;
+  }
+  
+  /* The "Forgot password" text */
+  span.password {
+    float: center;
+    
+  }
+  
+</style>
+<%- include('partials/footer'); -%>

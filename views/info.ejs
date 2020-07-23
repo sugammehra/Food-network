@@ -1,0 +1,23 @@
+<%- include('partials/header'); -%>
+<h1><%= info.name %></h1>
+<div class="container">
+    <img style="margin-left: 20em; height: 20em; width: 30em;" id="main-img" src="<%= info.image %>">
+    <h2>Ingredients:</h2><br>
+    <h4><%= info.ingredients %></h4><br>
+    <h2>Preparation</h2>
+    <p><%= info.preparation %></p>
+</div>
+<%- include('partials/footer'); -%>
+
+<style>
+    h1{
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 25px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 4rem;
+    }
+    #main-img{
+        margin-left: 400px;
+    }
+</style>
