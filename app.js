@@ -9,6 +9,7 @@ var express       =require("express"),
     LocalStrategy =require("passport-local"),
     User          =require("./views/models/User"),
     recipie       =require("./views/models/recipies")
+const PORT = process.env.PORT || 5000;
 mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs")
@@ -164,6 +165,4 @@ app.get("/logout",function(req,res){
 app.get("*",function(req,res){
     res.send("ERROR 404: PAGE NOT FOUND")
 });
-app.listen(3000,"127.0.0.1",function(){
-    console.log("Server Started");    
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
