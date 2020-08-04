@@ -12,7 +12,13 @@ var express       =require("express"),
 const PORT = process.env.PORT || 5000;
 // mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
 // mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/Cluster0?retryWrites=true&w=majority",{useNewUrlParser:true});
-mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/test",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/test",{useNewUrlParser:true},function(err,body){
+    if(error){
+        console.log(err);
+    } else{
+        console.log("database connected");
+    }
+});
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs")
 
