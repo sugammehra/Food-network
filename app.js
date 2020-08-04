@@ -11,8 +11,9 @@ var express       =require("express"),
     recipie       =require("./views/models/recipies")
 const PORT = process.env.PORT || 5000;
 // mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
-// mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/Cluster0?retryWrites=true&w=majority",{useNewUrlParser:true});
-mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/test",{useNewUrlParser:true},function(err,body){
+
+mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/Cluster0?retryWrites=true&w=majority",{useNewUrlParser:true},function(err,body){
+//mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/test",{useNewUrlParser:true},function(err,body){
     if(error){
         console.log(err);
     } else{
