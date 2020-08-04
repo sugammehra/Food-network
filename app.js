@@ -9,33 +9,36 @@ var express       =require("express"),
     LocalStrategy =require("passport-local"),
     User          =require("./views/models/User"),
     recipie       =require("./views/models/recipies")
-mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
+const PORT = process.env.PORT || 5000;
+// mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
+// mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/Cluster0?retryWrites=true&w=majority",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/test",{useNewUrlParser:true});
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs")
 
 
-var options = {
-  method: 'POST',
-  url: 'https://worldwide-recipes.p.rapidapi.com/api/yummly/recipe/typeahead',
-  headers: {
-    'x-rapidapi-host': 'worldwide-recipes.p.rapidapi.com',
-    'x-rapidapi-key': '2ca3b4fb54msh890cd8d1ddb094dp1e99e2jsneaac43d63e9b',
-    'content-type': 'application/x-www-form-urlencoded',
-    useQueryString: true
-  },
-  form: {q: 'pizza'}
-};
+//var options = {
+//  method: 'POST',
+  //url: 'https://worldwide-recipes.p.rapidapi.com/api/yummly/recipe/typeahead',
+//  headers: {
+  //  'x-rapidapi-host': 'worldwide-recipes.p.rapidapi.com',
+    //'x-rapidapi-key': '2ca3b4fb54msh890cd8d1ddb094dp1e99e2jsneaac43d63e9b',
+//    'content-type': 'application/x-www-form-urlencoded',
+ //   useQueryString: true
+ // },
+ // form: {q: 'pizza'}
+//};
 
-app.get("/search",function(req,res){
-    var query=req.query.search;
-    request(options, function (error, response, body){
-        if(!error && response.statusCode==200){
-            var data=JSON.parse(body);
-            res.render("search",{data:data});
-            console.log(body);
-        }
-    })
-});
+//app.get("/search",function(req,res){
+  //  var query=req.query.search;
+    //request(options, function (error, response, body){
+//        if(!error && response.statusCode==200){
+  //          var data=JSON.parse(body);
+    //        res.render("search",{data:data});
+      //      console.log(body);
+        //}
+  //  })
+//});
 
 
 
@@ -164,6 +167,6 @@ app.get("/logout",function(req,res){
 app.get("*",function(req,res){
     res.send("ERROR 404: PAGE NOT FOUND")
 });
-app.listen(3000,"127.0.0.1",function(){
-    console.log("Server Started");    
-});
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
