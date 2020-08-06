@@ -12,7 +12,7 @@ var express       =require("express"),
 const PORT = process.env.PORT || 5000;
 // mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
 
-mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/users?retryWrites=true&w=majority",{useNewUrlParser:true},function(err,body){
+mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/cluster0?retryWrites=true&w=majority",{useNewUrlParser:true},function(err,body){
 //mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/test",{useNewUrlParser:true},function(err,body){
     if(error){
         console.log(err);
