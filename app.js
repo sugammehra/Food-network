@@ -10,10 +10,10 @@ var express       =require("express"),
     User          =require("./views/models/User"),
     recipie       =require("./views/models/recipies")
 const PORT = process.env.PORT || 5000;
- mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
+ //mongoose.connect("mongodb://localhost:27017/food",{useNewUrlParser:true});
 //mongoose.connect("mongodb+srv://sugam:<pwd>@cluster0.jzv7t.mongodb.net/<dbname>",{useNewUrlParser:true},function(err,body){
-mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/food?retryWrites=true&w=majority",{useNewUrlParser:true})
-
+//mongoose.connect("mongodb+srv://sugam:sugam@cluster0.jzv7t.mongodb.net/food?retryWrites=true&w=majority",{useNewUrlParser:true})
+mongoose.connect("mongodb://sugam:<password>@cluster0-shard-00-00.jzv7t.mongodb.net:27017,cluster0-shard-00-01.jzv7t.mongodb.net:27017,cluster0-shard-00-02.jzv7t.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-mbj4l5-shard-0&authSource=admin&retryWrites=true&w=majority",{useNewUrlParser:true})
 //    if(error){
 //        console.log(err);
 //    } else{
