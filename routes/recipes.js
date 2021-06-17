@@ -39,7 +39,7 @@ router.post("/join",function(req,res){
             console.log("enquiry submitted",enquiry)
         }
     });
-    req.flash('success', ' Thanks!,We will contact you shortly');
+    req.flash('success', ' Thanks,We will contact you shortly');
     res.redirect("join");
 })
 router.get("/recipes",function(req,res){
