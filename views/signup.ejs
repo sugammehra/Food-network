@@ -1,14 +1,12 @@
 <%- include('partials/header'); -%>
-<h1 style="text-align: center;" >Sign Up </h1>
+<h1 id="head" >Sign Up </h1>
 <form action="/signup" method="POST">
-    
-    <div class="container" >
-        
-      <label ><b>Username</b></label><br>
-      <input type="text" placeholder="Enter Username" name="username" required><br>
+    <div class="container" > 
+      <label ><b>Email Id</b></label><br>
+      <input type="text" placeholder="Enter your Email" name="username"  required><br>
   
       <label ><b>Password</b></label><br>
-      <input type="password" placeholder="Enter Password" name="password" required><br>
+      <input type="password" placeholder="Enter Password"  minlength="8" name="password" required><br>
   
       <button>Sign Up</button><br>
     </div>
@@ -16,6 +14,10 @@
   <style>
   form {
     border: 3px solid #f1f1f1;
+    
+  }
+  #head{
+    text-align: center;
     
   }
   
@@ -49,7 +51,7 @@
   /* Add padding to containers */
   .container {
     padding: 16px;
-    margin-left: 300px;
+    margin-left: 316px;
   }
   
 </style>

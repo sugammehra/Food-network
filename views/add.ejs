@@ -4,15 +4,15 @@
         <h1>Add New Recipie</h1>
     </div>
     <hr><br><br>
-    <form action="/" method="POST" style="text-align: center;">
+    <form action="/" enctype="multipart/form-data" method="POST" style="text-align: center;">
         <label >Recipie Name:</label>
-        <input type="text" name="name" placeholder="Enter Recipie Nane"><br><br>
+        <input type="text" name="name" placeholder="Enter Recipie Nane" required><br><br>
         <label >Recipie Image:</label>
-        <input type="file" name="image" placeholder="Enter Image URL"><br><br>
+        <input type="file"  name="image" placeholder="Enter Image URL" required><br><br>
         <label >Ingredients:</label><br>
-        <textarea name="ing" placeholder="Enter Ingredients" rows="7" cols="50"></textarea><br><br>
+        <textarea name="ing" placeholder="Enter Ingredients" required rows="7" cols="50"></textarea><br><br>
         <label>Method:</label><br>
-        <textarea name="prep" placeholder="Enter Preparation" rows="10" cols="50"></textarea><br><br>
+        <textarea name="prep" placeholder="Enter Preparation" required rows="10" cols="50"></textarea><br><br>
         <button class="btn btn-primary">Submit</button>
       </form>
 </div>

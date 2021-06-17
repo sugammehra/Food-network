@@ -1,9 +1,9 @@
 <%- include('partials/header'); -%>
 <div class="container">
-    <h1>Welcome To Cooking Delicaciess</h1><br><br>
-    <h2 >Healthy Eating</h2>
+    <h1 id ="h1">Welcome To Cooking Delicacies</h1><br><br>
+    <h2 id="h2" >Healthy Eating</h2>
     <p >Confused by all the conflicting nutrition advice out there? These simple tips can show you how to plan, enjoy, and stick to a healthy diet.</p>
-    <img src="https://www.helpguide.org/wp-content/uploads/girl-mother-corn-on-cob-768.jpg">
+    <img  class="img-fluid " id="image" src="https://www.helpguide.org/wp-content/uploads/girl-mother-corn-on-cob-768.jpg">
     <h2>What is a healthy diet?</h2>
     <p>Eating a healthy diet is not about strict limitations, staying unrealistically thin, or depriving yourself of the foods you love. Rather, it’s about feeling great, having more energy, improving your health, and boosting your mood.
 
@@ -11,7 +11,7 @@
         
         By using these simple tips, you can cut through the confusion and learn how to create—and stick to—a tasty, varied, and nutritious diet that is as good for your mind as it is for your body.</p>
     <h3>The Healthy Eating Pyramid</h3><hr>
-    <img src="https://www.helpguide.org/wp-content/uploads/2018/11/healthy-eating-pyramid-500.jpg"><br>
+    <img class="img-fluid" id="image" src="https://www.helpguide.org/wp-content/uploads/2018/11/healthy-eating-pyramid-500.jpg"><br>
     <h2>The fundamentals of healthy eating</h2>
     <p>While some extreme diets may suggest otherwise, we all need a balance of protein, fat, carbohydrates, fiber, vitamins, and minerals in our diets to sustain a healthy body. You don’t need to eliminate certain categories of food from your diet, but rather select the healthiest options from each category.
 
@@ -19,12 +19,20 @@
         Fat. Not all fat is the same. While bad fats can wreck your diet and increase your risk of certain diseases, good fats protect your brain and heart. In fact, healthy fats—such as omega-3s—are vital to your physical and emotional health. Including more healthy fat in your diet can help improve your mood, boost your well-being, and even trim your waistline.</p>
 </div>
 <style>
-    h2{
+    #h1{
+        text-align: center;
+    }
+    #h2{
         color: skyblue;
     }
     p{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: larger;
+    }
+    #image{
+        max-width: 100%;
+        height: auto;
+
     }
 </style>
 <%- include('partials/footer'); -%>
